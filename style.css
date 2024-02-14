@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(162, 166, 50);
+}
+.player{
+    width: 330px;
+    height: 190px;
+    background-color: rgb(210, 43, 43);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    box-shadow: 0 5px 0 0 rgb(152, 51, 51);
+}
+.record{
+    background-color: black;
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.record:before,
+.record:after{
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+    border-top-color: rgb(52, 44, 44);
+    border-bottom-color: rgb(40, 36, 36);
+    border-radius: 50%;
+}
+.record:before{
+    height: 135px;
+    width:  135px;
+}
+.record:after{
+    height: 95px;
+    width: 95px;
+}
+.label{
+    background-color: rgb(94, 73, 73);
+    height: 15px;
+    width: 15px;
+    box-shadow: 0 0 0 15px rgb(255, 217, 0);
+    border-radius: 50%;
+}
+.torn-alarm{
+    background-color: rgb(248, 243, 243);
+    height: 90px;
+    width: 6px;
+    position: absolute;
+    top: 25px;
+    right: 95px;
+    transform-origin: top;
+
+}
+.control{
+    background-color: rgb(44, 40, 40);
+    height: 17px;
+    width: 17px;
+    border: 10px solid rgb(42, 33, 33);
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -8px;
+}
+.torn-alarm::before{
+    content: '';
+    background-color: rgb(248, 243, 243);
+    height: 40px;
+    width: 6px;
+    position: absolute;
+    top: 85px;
+    right: 9px;
+    transform: rotate(30deg);
+}
+.torn-alarm::after{
+    content: '';
+    background-color: rgb(202, 185, 185);
+    height: 15px;
+    width: 10px;
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    transform: rotate(30deg);
+}
+.btn{
+    background: rgba(206, 17, 17, 0.339);
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid rgb(150, 34, 34);
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.slider{
+    --webkit-apearence: none;
+    appearance: none;
+    transform: rotate(270deg);
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    width: 70px;
+    height: 7px;
+    background-color: rgb(202, 46, 46);
+    outline: none;
+    outline: 6px solid rgba(195, 180, 180, 0.576);
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+    width: 10px;
+    height: 12px;
+    cursor: pointer;
+}
+.play{
+    transform: rotate(30deg);
+    transition: 1s;
+    transform-origin: top;
+}
+.on{
+    animation: spin 3s 1s linear infinite;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>3D_CUBE_SLIDER</title>
+</head>
+<body>
+    <div class="player">
+        <div class="record">
+            <div class="label">
+
+            </div>
+        </div>
+        <div class="torn-alarm">
+            <div class="control"></div>
+        </div>
+        <button class="btn"><i class="fa-solid fa-play icon"></i></button>
+        <div class="slider-container">
+            <input type="range" class="slider" min="0" max="1" step=".1" value=".7">
+        </div>
+    </div>
+    <audio loop class="my-song" src="./audio.mp3" preload="auto"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
